@@ -486,7 +486,7 @@ public class Client {
         List<Education> eduList = new ArrayList<Education>();
         for (int i = 0; i < educationsList.size(); i++) {
             String school = educationsList.get(i).getText();
-            String year = educationsList.get(i++).getText();
+            String year = educationsList.get(++i).getText();
             System.out.println(school);
             System.out.println(year);
             if (!school.isEmpty() && !year.isEmpty()) {
@@ -501,8 +501,8 @@ public class Client {
         List<Experience> expList = new ArrayList<Experience>();
         for (int i = 0; i < experiencesList.size(); i++) {
             String name = experiencesList.get(i).getText();
-            String year = experiencesList.get(i++).getText();
-            String desc = experiencesList.get(i++).getText();
+            String year = experiencesList.get(++i).getText();
+            String desc = experiencesList.get(++i).getText();
             if (!name.isEmpty() && !year.isEmpty() && !desc.isEmpty()) {
                 expList.add(new Experience(
                         name,
